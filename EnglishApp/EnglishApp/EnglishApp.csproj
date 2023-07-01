@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ResourceForImages.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="ResourceForImages.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\arrow.jpg" />
+    <None Remove="Resources\arrow.png" />
+    <None Remove="Resources\boss_misunderstanding.png" />
+    <None Remove="Resources\capibar.jpg" />
+    <None Remove="Resources\capibara.png" />
+    <None Remove="Resources\capibars.jpg" />
+    <None Remove="Resources\cat_running_verbs.png" />
+    <None Remove="Resources\menu.png" />
+    <None Remove="Resources\rat_playing_guitar.png" />
+    <None Remove="Resources\sound.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\arrow.jpg" />
+    <Resource Include="Resources\boss_misunderstanding.png" />
+    <Resource Include="Resources\capibar.jpg" />
+    <Resource Include="Resources\cat_running_verbs.png" />
+    <Resource Include="Resources\menu.png" />
+    <Resource Include="Resources\rat_playing_guitar.png" />
+    <Resource Include="Resources\sound.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Settings1.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

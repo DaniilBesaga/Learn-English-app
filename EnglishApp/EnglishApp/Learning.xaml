@@ -1,0 +1,81 @@
+﻿<Page x:Class="EnglishApp.Learning"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EnglishApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="500"
+      Title="Learning" Unloaded="Page_Unloaded">
+    <Page.Resources>
+        
+        <Style x:Key="WordButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="6" BorderThickness="1" BorderBrush="LightBlue" 
+                    Margin="0 0 0 30" HorizontalAlignment="Center" Height="70" Width="400" Background="{TemplateBinding Background}">
+                            <ContentPresenter RecognizesAccessKey="True" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                           
+                            
+                        </Border>
+                        <!--<ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseCaptureWithin" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource colorofanimation}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>-->
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
+            
+        </Style>
+
+        <ControlTemplate x:Key="HeaderButtons" TargetType="Button">
+            <Border CornerRadius="16" BorderThickness="1" BorderBrush="LightBlue" 
+                    Margin="0 0 0 0" HorizontalAlignment="Center" Height="60" Width="60" Background="Gray">
+                <ContentPresenter RecognizesAccessKey="True" HorizontalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        
+    </Page.Resources>
+    <StackPanel Background="LightSalmon">
+        <Grid Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Width="62" Height="60" Margin="20 0 0 0" 
+                    HorizontalAlignment="Left" Template="{StaticResource HeaderButtons}" Click="Button_Click_1">
+                <Image Source="Resources\sound.png"/>
+            </Button>
+            <Button Grid.Column="1" Width="60" Height="60" 
+                    HorizontalAlignment="Right" Margin="0 0 20 0" Template="{StaticResource HeaderButtons}" Click="Button_Click">
+                <Image Source="Resources\menu.png"/>
+            </Button>
+        </Grid>
+        <StackPanel Margin="50 30 50 20" Height="600">
+            <StackPanel Height="100" Margin="20 10 20 0">
+                <TextBlock FontSize="40" FontFamily="Candara" Foreground="White"
+                           FontWeight="SemiBold" HorizontalAlignment="Center" Name="TB_Engw">Guitar</TextBlock>
+                <TextBlock FontFamily="Candara" Margin="0 10 0 0" Foreground="White"
+                           HorizontalAlignment="Center" FontSize="30">Coming soon...</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0 50 0 0" x:Name="SP_Words">
+                <Button Style="{StaticResource WordButton}" Content="Гитара" 
+                        x:Name="FirstWordButton" Click="FirstWordButton_Click"/>
+                <Button Style="{StaticResource WordButton}" Content="Дерево"
+                        x:Name="SecondWordButton" Click="SecondWordButton_Click"/>
+                <Button Style="{StaticResource WordButton}" Content="Дверь"
+                        x:Name="ThirdWordButton" Click="ThirdWordButton_Click"/>
+                <Button Style="{StaticResource WordButton}" Content="Лес"
+                        x:Name="FourthWordButton" Click="FourthWordButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+
+</Page>

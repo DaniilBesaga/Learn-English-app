@@ -1,0 +1,15 @@
+﻿<Application x:Class="EnglishApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EnglishApp"
+             StartupUri="ChooseLang.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="Animals" UriSource="Resources/capibara.png"/>
+            <BitmapImage x:Key="Music instruments" UriSource="Resources/rat_playing_guitar.png"/>
+            <BitmapImage x:Key="Verbs" UriSource="Resources/cat_running_verbs.png"/>
+            <BitmapImage x:Key="Phrasal verbs" UriSource="Resources/boss_misunderstanding.png"/>
+            <Color x:Key="colorofanimation"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
